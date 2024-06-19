@@ -1,5 +1,7 @@
+import LoadingScreen from "@/components/global/loading-screen/LoadingScreen";
+
 const RootPage = () => {
-  return <h1>Hello World</h1>;
+  return <LoadingScreen />;
 };
 
 export default RootPage;
