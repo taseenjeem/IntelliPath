@@ -1,5 +1,6 @@
 import { Hind_Siliguri } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/global/navigation/Navbar";
 
 const fontStyle = Hind_Siliguri({
   subsets: ["latin"],
@@ -14,7 +15,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={fontStyle.className}>{children}</body>
+      <body className={fontStyle.className}>
+        <Navbar>{children}</Navbar>
+      </body>
     </html>
   );
 }
