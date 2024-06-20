@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ActiveLink from "./ActiveLink";
+import ThemeController from "./ThemeController";
 
 const Navbar = ({ children }) => {
   return (
@@ -12,7 +13,7 @@ const Navbar = ({ children }) => {
             <div className="flex-1 px-2 mx-2 lg:flex">
               <Link
                 href={`/`}
-                className="text-xl font-semibold btn btn-ghost uppercase tracking-widest text-accent"
+                className="text-xl font-semibold btn btn-ghost uppercase tracking-widest text-primary"
               >
                 n a t o
               </Link>
@@ -39,7 +40,7 @@ const Navbar = ({ children }) => {
               </label>
             </div>
             <div className="flex-none hidden lg:block">
-              <ul className="menu menu-horizontal text-accent">
+              <ul className="menu menu-horizontal items-center text-primary">
                 {/* Navbar menu content here */}
                 <li>
                   <ActiveLink href={`/shop`}>Shop</ActiveLink>
@@ -52,6 +53,9 @@ const Navbar = ({ children }) => {
                 </li>
                 <li>
                   <ActiveLink href={`#`}>Customer Reviews</ActiveLink>
+                </li>
+                <li>
+                  <ThemeController />
                 </li>
               </ul>
             </div>
@@ -78,6 +82,9 @@ const Navbar = ({ children }) => {
           </li>
           <li>
             <ActiveLink href={`#`}>Customer Reviews</ActiveLink>
+          </li>
+          <li>
+            <ThemeController />
           </li>
         </ul>
       </div>
