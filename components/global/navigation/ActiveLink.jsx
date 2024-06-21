@@ -9,11 +9,9 @@ const ActiveLink = ({ href, children }) => {
   return (
     <>
       <Link
-        className={
-          isActive
-            ? "btn btn-primary btn-sm font-semibold md:mx-1 mx-0 my-1 md:my-0"
-            : "btn btn-ghost btn-sm font-semibold md:mx-1 mx-0 my-1 md:my-0"
-        }
+        className={`btn btn-sm font-semibold md:mx-1 mx-0 my-1 md:my-0 ${
+          isActive ? "btn-primary" : "btn-ghost"
+        }`}
         href={href}
       >
         {children}
