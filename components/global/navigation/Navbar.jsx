@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ActiveLink from "./ActiveLink";
 import ThemeController from "./ThemeController";
+import Logo from "../logo/Logo";
 
 const Navbar = ({ children }) => {
   return (
@@ -15,7 +16,7 @@ const Navbar = ({ children }) => {
                 href={`/`}
                 className="text-xl font-semibold btn btn-ghost tracking-widest text-primary"
               >
-                IntelliPath
+                <Logo navbarMode={true} />
               </Link>
             </div>
             <div className="flex-none lg:hidden">
