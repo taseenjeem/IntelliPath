@@ -5,13 +5,15 @@ import lightLogo from "/public/assets/logo/IntelliPath-light-mode-logo.png";
 import { ThemeContext } from "@/providers/ThemProvider";
 import Image from "next/image";
 
-const Logo = ({ navbarMode }) => {
+const Logo = ({ navbarMode, formMode }) => {
   const { theme } = useContext(ThemeContext);
 
   return (
     <>
       <Image
-        className={navbarMode && "max-w-32"}
+        className={
+          (navbarMode && "max-w-32") || (formMode && "max-w-48 mx-auto")
+        }
         src={theme === "light" ? lightLogo : darkLogo}
         alt="IntelliPath Logo"
       />
