@@ -11,8 +11,8 @@ const ActiveLink = ({ href, children }) => {
       <Link
         className={
           isActive
-            ? "btn btn-primary btn-sm font-normal md:mx-1 mx-0 my-1 md:my-0"
-            : "btn btn-ghost btn-sm font-normal md:mx-1 mx-0 my-1 md:my-0"
+            ? "btn btn-primary btn-sm font-semibold md:mx-1 mx-0 my-1 md:my-0"
+            : "btn btn-ghost btn-sm font-semibold md:mx-1 mx-0 my-1 md:my-0"
         }
         href={href}
       >
