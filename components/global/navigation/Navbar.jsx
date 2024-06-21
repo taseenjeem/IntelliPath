@@ -2,6 +2,7 @@ import Link from "next/link";
 import ActiveLink from "./ActiveLink";
 import ThemeController from "./ThemeController";
 import Logo from "../logo/Logo";
+import UserActionBtns from "./UserActionBtns";
 
 const Navbar = ({ children }) => {
   return (
@@ -44,16 +45,19 @@ const Navbar = ({ children }) => {
               <ul className="menu menu-horizontal items-center text-primary">
                 {/* Navbar menu content here */}
                 <li>
-                  <ActiveLink href={`/shop`}>Shop</ActiveLink>
+                  <ActiveLink href={`/shop`}>Features</ActiveLink>
                 </li>
                 <li>
-                  <ActiveLink href={`#`}>About Us</ActiveLink>
+                  <ActiveLink href={`#`}>Pricing</ActiveLink>
                 </li>
                 <li>
-                  <ActiveLink href={`/contact-us`}>Contact Us</ActiveLink>
+                  <ActiveLink href={`/contact-us`}>Blogs</ActiveLink>
                 </li>
                 <li>
-                  <ActiveLink href={`#`}>Customer Reviews</ActiveLink>
+                  <ActiveLink href={`#`}>Documentation</ActiveLink>
+                </li>
+                <li>
+                  <UserActionBtns />
                 </li>
                 <li>
                   <ThemeController />
@@ -73,16 +77,16 @@ const Navbar = ({ children }) => {
         <ul className="menu p-4 pt-20 w-80 min-h-full bg-base-200">
           {/* Sidebar content here */}
           <li>
-            <ActiveLink href={`/shop`}>Shop</ActiveLink>
+            <ActiveLink href={`/shop`}>Features</ActiveLink>
           </li>
           <li>
-            <ActiveLink href={`#`}>About Us</ActiveLink>
+            <ActiveLink href={`#`}>Pricing</ActiveLink>
           </li>
           <li>
-            <ActiveLink href={`#`}>Contact Us</ActiveLink>
+            <ActiveLink href={`/contact-us`}>Blogs</ActiveLink>
           </li>
           <li>
-            <ActiveLink href={`#`}>Customer Reviews</ActiveLink>
+            <ActiveLink href={`#`}>Documentation</ActiveLink>
           </li>
           <li>
             <ThemeController />
