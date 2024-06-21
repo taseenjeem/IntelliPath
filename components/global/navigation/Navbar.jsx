@@ -13,9 +13,9 @@ const Navbar = ({ children }) => {
             <div className="flex-1 px-2 mx-2 lg:flex">
               <Link
                 href={`/`}
-                className="text-xl font-semibold btn btn-ghost uppercase tracking-widest text-primary"
+                className="text-xl font-semibold btn btn-ghost tracking-widest text-primary"
               >
-                n a t o
+                IntelliPath
               </Link>
             </div>
             <div className="flex-none lg:hidden">
