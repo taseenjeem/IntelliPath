@@ -11,11 +11,11 @@ const ThemeController = () => {
     <>
       {theme === "light" ? (
         <button onClick={() => changeTheme("sunset")}>
-          <MdDarkMode className="size-6" />
+          <MdDarkMode className="size-5" />
         </button>
       ) : (
         <button onClick={() => changeTheme("light")}>
-          <MdLightMode className="size-6" />
+          <MdLightMode className="size-5" />
         </button>
       )}
     </>
