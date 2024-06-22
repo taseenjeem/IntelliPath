@@ -15,7 +15,7 @@ const Navbar = ({ children }) => {
             <div className="flex-1 px-2 mx-2 lg:flex">
               <Link
                 href={`/`}
-                className="text-xl font-semibold btn btn-ghost tracking-widest text-primary"
+                className="text-xl font-semibold btn btn-ghost tracking-widest text-primary px-1"
               >
                 <Logo navbarMode={true} />
               </Link>
@@ -57,6 +57,9 @@ const Navbar = ({ children }) => {
                   <ActiveLink href={`#`}>Documentation</ActiveLink>
                 </li>
                 <li>
+                  <ActiveLink href={`#`}>Contact Us</ActiveLink>
+                </li>
+                <li>
                   <UserActionBtns />
                 </li>
                 <li>
@@ -87,6 +90,12 @@ const Navbar = ({ children }) => {
           </li>
           <li>
             <ActiveLink href={`#`}>Documentation</ActiveLink>
+          </li>
+          <li>
+            <ActiveLink href={`#`}>Contact Us</ActiveLink>
+          </li>
+          <li>
+            <UserActionBtns />
           </li>
           <li>
             <ThemeController />
