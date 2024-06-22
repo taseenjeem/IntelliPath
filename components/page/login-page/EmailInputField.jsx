@@ -5,9 +5,7 @@ const EmailInputField = ({ register, errors }) => {
         <label htmlFor="email" className="label">
           <span
             className={`label-text ${
-              errors?.email || errors?.root?.random?.message
-                ? "text-red-500"
-                : ""
+              errors?.email || errors?.root?.random?.message ? "text-error" : ""
             }`}
           >
             Email
