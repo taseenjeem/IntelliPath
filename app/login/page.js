@@ -12,9 +12,14 @@ const LoginPage = () => {
               Welcome Back!
             </h1>
             <p className="py-6 text-left">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
+              Welcome to IntelliPath! Please log in to access your personalized
+              learning dashboard and continue your educational journey. If you
+              don&apos;t have an account yet, sign up now to unlock a world of
+              knowledge and start navigating your future with us.
+            </p>
+            <p className="mb-3">
+              Don&apos;t have an account? Create one today and start your path
+              to success with IntelliPath!
             </p>
             <Link className="btn btn-neutral text-left" href={`/register`}>
               Create a new account
