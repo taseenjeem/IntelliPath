@@ -1,6 +1,5 @@
 "use client";
 import Logo from "@/components/global/logo/Logo";
-import SocialAuth from "@/components/global/social-auth/SocialAuth";
 import { useForm } from "react-hook-form";
 
 const LoginForm = () => {
@@ -22,7 +21,7 @@ const LoginForm = () => {
           <input
             type="email"
             placeholder="example@email.com"
-            className="input input-bordered"
+            className="input input-bordered input-primary"
             required
           />
         </div>
@@ -33,7 +32,7 @@ const LoginForm = () => {
           <input
             type="password"
             placeholder="abc@123"
-            className="input input-bordered"
+            className="input input-bordered input-primary"
             required
           />
           <label className="label flex justify-end">

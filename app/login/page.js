@@ -5,7 +5,7 @@ import Link from "next/link";
 const LoginPage = () => {
   return (
     <>
-      <div className="hero custom-min-h bg-base-200">
+      <div className="hero custom-min-h">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="lg:text-left mb-5 md:mb-0">
             <h1 className="text-5xl text-center lg:text-left font-bold">
@@ -20,7 +20,7 @@ const LoginPage = () => {
               Create a new account
             </Link>
           </div>
-          <div className="card shrink-0 w-full max-w-lg shadow-2xl bg-base-100">
+          <div className="card shrink-0 w-full max-w-lg bg-base-200">
             <LoginForm />
             <SocialAuth />
           </div>
