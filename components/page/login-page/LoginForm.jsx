@@ -5,8 +5,11 @@ import EmailInputField from "./EmailInputField";
 import { toast } from "react-toastify";
 import PassInputField from "./PassInputField";
 import Link from "next/link";
+import { useState } from "react";
 
 const LoginForm = () => {
+  const [isLoading, setIsLoading] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -15,6 +18,7 @@ const LoginForm = () => {
   } = useForm();
 
   const loginForm = async (data) => {
+    setIsLoading(true);
     try {
       console.log(data);
     } catch (error) {
@@ -25,6 +29,8 @@ const LoginForm = () => {
       if (error?.response?.status === 500) {
         toast.error(`Incorrect information. Please try again!`);
       }
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -35,9 +41,16 @@ const LoginForm = () => {
         <EmailInputField register={register} errors={errors} />
         <PassInputField register={register} errors={errors} />
         <div className="form-control mt-6">
-          <button type="submit" className="btn btn-primary">
-            Login
-          </button>
+          {isLoading ? (
+            <button disabled className="btn btn-primary">
+              <span className="loading loading-spinner"></span>
+              Loading..
+            </button>
+          ) : (
+            <button type="submit" className="btn btn-primary">
+              Login
+            </button>
+          )}
           <label className="label flex justify-start">
             <Link
               href="/reset-password"
