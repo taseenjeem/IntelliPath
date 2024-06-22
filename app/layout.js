@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/global/navigation/Navbar";
 import { ThemeProvider } from "@/providers/ThemProvider";
 import ThemeChanger from "@/utils/ThemeChanger";
+import Footer from "@/components/global/footer/Footer";
 
 const fontStyle = Barlow({
   subsets: ["latin"],
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
         <ThemeProvider>
           <ThemeChanger>
             <Navbar>{children}</Navbar>
+            <Footer />
           </ThemeChanger>
         </ThemeProvider>
       </body>

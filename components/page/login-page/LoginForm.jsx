@@ -1,7 +1,16 @@
+"use client";
 import Logo from "@/components/global/logo/Logo";
 import SocialAuth from "@/components/global/social-auth/SocialAuth";
+import { useForm } from "react-hook-form";
 
 const LoginForm = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    setError,
+  } = useForm();
+
   return (
     <>
       <form className="card-body !pb-0">
