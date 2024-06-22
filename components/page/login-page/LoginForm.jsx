@@ -38,6 +38,11 @@ const LoginForm = () => {
           <button type="submit" className="btn btn-primary">
             Login
           </button>
+          <label className="label flex justify-start">
+            <a href="#" className="label-text-alt link link-hover">
+              Forgot password?
+            </a>
+          </label>
         </div>
       </form>
     </>
