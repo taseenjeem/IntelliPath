@@ -13,7 +13,7 @@ const LoginForm = () => {
 
   return (
     <>
-      <form className="card-body !pb-0">
+      <form className="card-body pb-0">
         <Logo formMode={true} />
         <div className="form-control">
           <label className="label">
