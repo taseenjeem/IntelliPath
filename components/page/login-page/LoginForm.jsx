@@ -39,7 +39,10 @@ const LoginForm = () => {
             Login
           </button>
           <label className="label flex justify-start">
-            <Link href="#" className="label-text-alt link link-hover">
+            <Link
+              href="/reset-password"
+              className="label-text-alt link link-hover"
+            >
               Forgot password?
             </Link>
           </label>
