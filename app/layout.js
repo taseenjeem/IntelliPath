@@ -4,6 +4,7 @@ import Navbar from "@/components/global/navigation/Navbar";
 import { ThemeProvider } from "@/providers/ThemProvider";
 import ThemeChanger from "@/utils/ThemeChanger";
 import Footer from "@/components/global/footer/Footer";
+import { ToastContainer } from "react-toastify";
 
 const fontStyle = Barlow({
   subsets: ["latin"],
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
       <body className={fontStyle.className}>
         <ThemeProvider>
           <ThemeChanger>
+            <ToastContainer position="top-center" theme="colored" />
             <Navbar>{children}</Navbar>
             <Footer />
           </ThemeChanger>

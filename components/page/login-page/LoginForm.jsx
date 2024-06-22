@@ -1,6 +1,8 @@
 "use client";
 import Logo from "@/components/global/logo/Logo";
 import { useForm } from "react-hook-form";
+import EmailInputField from "./EmailInputField";
+import { toast } from "react-toastify";
 
 const LoginForm = () => {
   const {
@@ -10,21 +12,25 @@ const LoginForm = () => {
     setError,
   } = useForm();
 
+  const loginForm = async (data) => {
+    try {
+      console.log(data);
+    } catch (error) {
+      setError("root.random", {
+        type: "random",
+        message: `User with ${data.email} is not found`,
+      });
+      if (error?.response?.status === 500) {
+        toast.error(`Incorrect information. Please try again!`);
+      }
+    }
+  };
+
   return (
     <>
-      <form className="card-body pb-0">
+      <form onSubmit={handleSubmit(loginForm)} className="card-body pb-0">
         <Logo formMode={true} />
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Email</span>
-          </label>
-          <input
-            type="email"
-            placeholder="example@email.com"
-            className="input input-bordered input-primary"
-            required
-          />
-        </div>
+        <EmailInputField register={register} errors={errors} />
         <div className="form-control">
           <label className="label">
             <span className="label-text">Password</span>
