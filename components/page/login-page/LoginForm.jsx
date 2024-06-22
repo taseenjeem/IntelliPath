@@ -39,9 +39,9 @@ const LoginForm = () => {
             Login
           </button>
           <label className="label flex justify-start">
-            <a href="#" className="label-text-alt link link-hover">
+            <Link href="#" className="label-text-alt link link-hover">
               Forgot password?
-            </a>
+            </Link>
           </label>
         </div>
       </form>
