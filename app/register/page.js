@@ -2,6 +2,12 @@ import SocialAuth from "@/components/global/social-auth/SocialAuth";
 import RegisterForm from "@/components/page/register-page/RegisterForm";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Create new account - IntelliPath",
+  description:
+    "Welcome to IntelliPath! Please log in to access your personalized learning dashboard and continue your educational journey. If you don't have an account yet, sign up now to unlock a world of knowledge and start navigating your future with us.",
+};
+
 const RegisterPage = () => {
   return (
     <>
