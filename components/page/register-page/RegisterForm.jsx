@@ -2,6 +2,7 @@
 import Logo from "@/components/global/logo/Logo";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import NameInputField from "./NameInputField";
 
 const RegisterForm = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -13,7 +14,7 @@ const RegisterForm = () => {
     setError,
   } = useForm();
 
-  const registerForm = async (data) => {
+  const handleRegister = async (data) => {
     setIsLoading(true);
     try {
       console.log(data);
@@ -26,8 +27,9 @@ const RegisterForm = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit(registerForm)} className="card-body pb-0">
+      <form onSubmit={handleSubmit(handleRegister)} className="card-body pb-0">
         <Logo formMode={true} />
+        <NameInputField register={register} errors={errors} />
         <div className="form-control mt-6">
           {isLoading ? (
             <button disabled className="btn btn-primary">
