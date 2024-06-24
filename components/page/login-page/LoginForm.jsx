@@ -17,7 +17,7 @@ const LoginForm = () => {
     setError,
   } = useForm();
 
-  const loginForm = async (data) => {
+  const handleLogin = async (data) => {
     setIsLoading(true);
     try {
       console.log(data);
@@ -36,7 +36,7 @@ const LoginForm = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit(loginForm)} className="card-body pb-0">
+      <form onSubmit={handleSubmit(handleLogin)} className="card-body pb-0">
         <Logo formMode={true} />
         <EmailInputField register={register} errors={errors} />
         <PassInputField register={register} errors={errors} />
