@@ -4,13 +4,14 @@ import { usePathname } from "next/navigation";
 
 const UserActionBtns = () => {
   const pathName = usePathname();
+  const isActive = pathName.includes("/auth");
 
   return (
     <>
       <Link
-        href={`/login`}
-        className={`btn btn-primary ${
-          pathName !== "/login" && "btn-outline"
+        href={`/auth/login`}
+        className={`btn ${
+          isActive ? "btn-primary" : "btn-outline btn-primary"
         } btn-sm md:mx-1 mx-0 my-1 md:my-0`}
       >
         Log In

@@ -27,7 +27,7 @@ const LoginPage = () => {
               Don&apos;t have an account? Create one today and start your path
               to success with IntelliPath!
             </p>
-            <Link className="btn btn-neutral text-left" href={`/register`}>
+            <Link className="btn btn-neutral text-left" href={`/auth/register`}>
               Create a new account
             </Link>
           </div>
