@@ -1,37 +1,45 @@
 "use client";
 import Logo from "@/components/global/logo/Logo";
 import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { useForm, FormProvider } from "react-hook-form";
 import NameInputField from "./NameInputField";
 import EmailInputField from "./EmailInputField";
+import PassInputField from "./PassInputField";
 
 const RegisterForm = () => {
   const [isLoading, setIsLoading] = useState(false);
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    setError,
-  } = useForm();
+  const methods = useForm();
 
   const handleRegister = async (data) => {
     setIsLoading(true);
     try {
       console.log(data);
     } catch (error) {
-      setError(error?.message);
+      methods.setError("root.serverError", { message: error.message });
     } finally {
       setIsLoading(false);
     }
   };
 
   return (
-    <>
-      <form onSubmit={handleSubmit(handleRegister)} className="card-body pb-0">
+    <FormProvider {...methods}>
+      <form
+        onSubmit={methods.handleSubmit(handleRegister)}
+        className="card-body pb-0"
+      >
         <Logo formMode={true} />
-        <NameInputField register={register} errors={errors} />
-        <EmailInputField register={register} errors={errors} />
+        <NameInputField
+          register={methods.register}
+          errors={methods.formState.errors}
+        />
+        <EmailInputField
+          register={methods.register}
+          errors={methods.formState.errors}
+        />
+        <PassInputField
+          register={methods.register}
+          errors={methods.formState.errors}
+        />
         <div className="form-control mt-6">
           {isLoading ? (
             <button disabled className="btn btn-primary">
@@ -45,7 +53,7 @@ const RegisterForm = () => {
           )}
         </div>
       </form>
-    </>
+    </FormProvider>
   );
 };
 
