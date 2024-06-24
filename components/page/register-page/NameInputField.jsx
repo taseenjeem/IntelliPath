@@ -5,11 +5,7 @@ const NameInputField = ({ register, errors }) => {
         <div className="form-control">
           <label htmlFor="firstName" className="label">
             <span
-              className={`label-text ${
-                errors?.firstName || errors?.root?.random?.message
-                  ? "text-error"
-                  : ""
-              }`}
+              className={`label-text ${errors?.firstName ? "text-error" : ""}`}
             >
               First Name
             </span>
@@ -21,9 +17,7 @@ const NameInputField = ({ register, errors }) => {
             name="firstName"
             placeholder="John"
             className={`input input-bordered ${
-              errors?.firstName || errors?.root?.random?.message
-                ? "input-error"
-                : ""
+              errors?.firstName ? "input-error" : ""
             }`}
           />
           {errors?.firstName && (
@@ -38,11 +32,7 @@ const NameInputField = ({ register, errors }) => {
         <div className="form-control">
           <label htmlFor="lastName" className="label">
             <span
-              className={`label-text ${
-                errors?.lastName || errors?.root?.random?.message
-                  ? "text-error"
-                  : ""
-              }`}
+              className={`label-text ${errors?.lastName ? "text-error" : ""}`}
             >
               Last Name
             </span>
@@ -54,9 +44,7 @@ const NameInputField = ({ register, errors }) => {
             name="lastName"
             placeholder="Duo"
             className={`input input-bordered ${
-              errors?.lastName || errors?.root?.random?.message
-                ? "input-error"
-                : ""
+              errors?.lastName ? "input-error" : ""
             }`}
           />
           {errors?.lastName && (

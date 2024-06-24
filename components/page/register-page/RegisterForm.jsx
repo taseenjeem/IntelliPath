@@ -5,6 +5,7 @@ import { useForm, FormProvider } from "react-hook-form";
 import NameInputField from "./NameInputField";
 import EmailInputField from "./EmailInputField";
 import PassInputField from "./PassInputField";
+import { toast } from "react-toastify";
 
 const RegisterForm = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -15,6 +16,7 @@ const RegisterForm = () => {
     try {
       console.log(data);
     } catch (error) {
+      toast.error(error.message);
       methods.setError("root.serverError", { message: error.message });
     } finally {
       setIsLoading(false);
