@@ -3,11 +3,7 @@ const EmailInputField = ({ register, errors }) => {
     <>
       <div className="form-control">
         <label htmlFor="email" className="label">
-          <span
-            className={`label-text ${
-              errors?.email || errors?.root?.random?.message ? "text-error" : ""
-            }`}
-          >
+          <span className={`label-text ${errors?.email ? "text-error" : ""}`}>
             Email
           </span>
         </label>
@@ -24,7 +20,7 @@ const EmailInputField = ({ register, errors }) => {
           name="email"
           placeholder="example@email.com"
           className={`input input-bordered ${
-            errors?.email || errors?.root?.random?.message ? "input-error" : ""
+            errors?.email ? "input-error" : ""
           }`}
         />
         {errors?.email && (

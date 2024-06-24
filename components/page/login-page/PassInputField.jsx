@@ -10,11 +10,7 @@ const PassInputField = ({ register, errors }) => {
       <div className="form-control relative">
         <label htmlFor="password" className="label">
           <span
-            className={`label-text ${
-              errors?.password || errors?.root?.random?.message
-                ? "text-error"
-                : ""
-            }`}
+            className={`label-text ${errors?.password ? "text-error" : ""}`}
           >
             Password
           </span>
@@ -35,17 +31,13 @@ const PassInputField = ({ register, errors }) => {
             name="password"
             placeholder="aBcD@123"
             className={`input input-bordered w-full join-item ${
-              errors?.password || errors?.root?.random?.message
-                ? "input-error"
-                : ""
+              errors?.password ? "input-error" : ""
             }`}
           />
           <button
             type="button"
             className={`btn join-item ${
-              errors?.password || errors?.root?.random?.message
-                ? "btn-error"
-                : "btn-neutral"
+              errors?.password ? "btn-error" : "btn-neutral"
             }`}
             onClick={() => setShowPassword(!showPassword)}
           >

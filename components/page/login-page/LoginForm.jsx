@@ -1,45 +1,43 @@
 "use client";
 import Logo from "@/components/global/logo/Logo";
-import { useForm } from "react-hook-form";
+import { useForm, FormProvider } from "react-hook-form";
 import EmailInputField from "./EmailInputField";
-import { toast } from "react-toastify";
 import PassInputField from "./PassInputField";
+import { toast } from "react-toastify";
 import Link from "next/link";
 import { useState } from "react";
 
 const LoginForm = () => {
   const [isLoading, setIsLoading] = useState(false);
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    setError,
-  } = useForm();
+  const methods = useForm();
 
   const handleLogin = async (data) => {
     setIsLoading(true);
     try {
       console.log(data);
     } catch (error) {
-      setError("root.random", {
-        type: "random",
-        message: `User with ${data.email} is not found`,
-      });
-      if (error?.response?.status === 500) {
-        toast.error(`Incorrect information. Please try again!`);
-      }
+      toast.error(error.message);
+      methods.setError("root.serverError", { message: error.message });
     } finally {
       setIsLoading(false);
     }
   };
 
   return (
-    <>
-      <form onSubmit={handleSubmit(handleLogin)} className="card-body pb-0">
+    <FormProvider {...methods}>
+      <form
+        onSubmit={methods.handleSubmit(handleLogin)}
+        className="card-body pb-0"
+      >
         <Logo formMode={true} />
-        <EmailInputField register={register} errors={errors} />
-        <PassInputField register={register} errors={errors} />
+        <EmailInputField
+          register={methods.register}
+          errors={methods.formState.errors}
+        />
+        <PassInputField
+          register={methods.register}
+          errors={methods.formState.errors}
+        />
         <div className="form-control mt-6">
           {isLoading ? (
             <button disabled className="btn btn-primary">
@@ -61,7 +59,7 @@ const LoginForm = () => {
           </label>
         </div>
       </form>
-    </>
+    </FormProvider>
   );
 };
 
