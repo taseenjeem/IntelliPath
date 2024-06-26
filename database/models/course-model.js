@@ -36,15 +36,15 @@ const courseSchema = new Schema(
       ref: "users",
       index: true,
     },
-    quizzes: {
+    quizSet: {
       type: Schema.ObjectId,
-      ref: "quizzes",
+      ref: "quiz-sets",
       required: false,
     },
     testimonials: [
       {
         type: Schema.ObjectId,
-        ref: "Testimonial",
+        ref: "testimonials",
       },
     ],
   },
