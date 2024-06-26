@@ -53,5 +53,5 @@ const courseSchema = new Schema(
   }
 );
 
-export const courses =
+export const coursesDataModel =
   mongoose.models.courses ?? mongoose.model("courses", courseSchema);
