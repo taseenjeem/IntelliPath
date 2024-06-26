@@ -38,7 +38,7 @@ const courseSchema = new Schema(
     },
     quizSet: {
       type: Schema.ObjectId,
-      ref: "quiz-sets",
+      ref: "quiz_sets",
       required: false,
     },
     testimonials: [
