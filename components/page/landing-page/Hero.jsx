@@ -1,10 +1,21 @@
 import Link from "next/link";
+import bg from "/public/assets/images/hero-bg.png";
+import Image from "next/image";
 
 const Hero = () => {
   return (
-    <>
-      <div className="flex flex-1 w-full flex-col items-center justify-center text-center wrapper custom-min-h">
-        <span className="border-2 rounded-lg py-2 px-4 text-sm mb-5">
+    <section className="relative w-full custom-min-h">
+      <div className="absolute inset-0">
+        <Image
+          fill
+          priority
+          src={bg}
+          alt="Landing page banner image"
+          className="object-cover object-center"
+        />
+      </div>
+      <div className="flex flex-1 w-full flex-col items-center justify-center text-center wrapper custom-min-h relative z-[1]">
+        <span className="border-2 rounded-lg py-2 px-4 text-sm mb-5 bg-opacity-75">
           Forget about spending hundreds $
         </span>
         <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal sm:text-7xl">
@@ -21,7 +32,7 @@ const Hero = () => {
             <span className="relative">IntelliPath</span>
           </span>
         </h1>
-        <h2 className="mx-auto mt-12 max-w-xl leading-7">
+        <h2 className="mx-auto mt-12 max-w-2xl md:leading-7 md:text-lg">
           Discover a world of knowledge and skills tailored to your unique
           goals. Whether you&apos;re advancing your career, exploring new
           interests, or developing new skills, IntelliPath provides the
@@ -36,7 +47,7 @@ const Hero = () => {
           </Link>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
