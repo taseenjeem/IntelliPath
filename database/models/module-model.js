@@ -25,10 +25,15 @@ const moduleSchema = new Schema(
       ref: "courses",
       index: true,
     },
-    lessonIds: {
+    lessonIds: [
+      {
+        type: Schema.ObjectId,
+        ref: "lessons",
+      },
+    ],
+    duration: {
       required: true,
-      type: [Schema.ObjectId],
-      ref: "lessons",
+      type: Number,
     },
   },
   {
