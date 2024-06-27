@@ -1,7 +1,11 @@
-import LoadingScreen from "@/components/global/loading-screen/LoadingScreen";
+import Hero from "@/components/page/landing-page/Hero";
 
 const LandingPage = () => {
-  return <LoadingScreen />;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 };
 
 export default LandingPage;
