@@ -1,7 +1,7 @@
 import LoadingScreen from "@/components/global/loading-screen/LoadingScreen";
 
-const RootPage = () => {
+const LandingPage = () => {
   return <LoadingScreen />;
 };
 
-export default RootPage;
+export default LandingPage;
