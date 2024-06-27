@@ -2,13 +2,18 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const UserActionBtns = () => {
+const UserActionBtns = ({ isSmallDevice }) => {
   const pathName = usePathname();
   const isActive = pathName.includes("/auth");
+
+  const closeDrawer = () => {
+    document.getElementById("menu-contents").checked = false;
+  };
 
   return (
     <>
       <Link
+        onClick={isSmallDevice && closeDrawer}
         href={`/auth/login`}
         className={`btn ${
           isActive ? "btn-primary" : "btn-outline btn-primary"

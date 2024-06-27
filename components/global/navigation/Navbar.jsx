@@ -7,7 +7,7 @@ import UserActionBtns from "./UserActionBtns";
 const Navbar = ({ children }) => {
   return (
     <div className="drawer drawer-end">
-      <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
+      <input id="menu-contents" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
         <div className="w-full bg-base-300 sticky top-0 z-50">
@@ -22,7 +22,7 @@ const Navbar = ({ children }) => {
             </div>
             <div className="flex-none lg:hidden">
               <label
-                htmlFor="my-drawer-3"
+                htmlFor="menu-contents"
                 aria-label="open sidebar"
                 className="btn btn-square btn-ghost"
               >
@@ -45,7 +45,7 @@ const Navbar = ({ children }) => {
               <ul className="menu menu-horizontal items-center text-primary">
                 {/* Navbar menu content here */}
                 <li>
-                  <ActiveLink href={`/shop`}>Features</ActiveLink>
+                  <ActiveLink href={`/features`}>Features</ActiveLink>
                 </li>
                 <li>
                   <ActiveLink href={`#`}>Pricing</ActiveLink>
@@ -71,31 +71,41 @@ const Navbar = ({ children }) => {
         </div>
         {children}
       </div>
-      <div className="drawer-side">
+      <div className="drawer-side z-50">
         <label
-          htmlFor="my-drawer-3"
+          htmlFor="menu-contents"
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
         <ul className="menu p-4 pt-20 w-80 min-h-full bg-base-200">
           {/* Sidebar content here */}
           <li>
-            <ActiveLink href={`/shop`}>Features</ActiveLink>
+            <ActiveLink isSmallDevice={true} href={`/features`}>
+              Features
+            </ActiveLink>
           </li>
           <li>
-            <ActiveLink href={`#`}>Pricing</ActiveLink>
+            <ActiveLink isSmallDevice={true} href={`#`}>
+              Pricing
+            </ActiveLink>
           </li>
           <li>
-            <ActiveLink href={`/contact-us`}>Blogs</ActiveLink>
+            <ActiveLink isSmallDevice={true} href={`/contact-us`}>
+              Blogs
+            </ActiveLink>
           </li>
           <li>
-            <ActiveLink href={`#`}>Documentation</ActiveLink>
+            <ActiveLink isSmallDevice={true} href={`#`}>
+              Documentation
+            </ActiveLink>
           </li>
           <li>
-            <ActiveLink href={`#`}>Contact Us</ActiveLink>
+            <ActiveLink isSmallDevice={true} href={`#`}>
+              Contact Us
+            </ActiveLink>
           </li>
           <li>
-            <UserActionBtns />
+            <UserActionBtns isSmallDevice={true} />
           </li>
           <li>
             <ThemeController />
