@@ -40,7 +40,7 @@ const Hero = () => {
         </h2>
         <div className="sm:mt-10 mt-8 flex gap-3">
           <Link href="#" className="btn btn-primary">
-            Get started
+            Start Learning
           </Link>
           <Link href="#" className="btn btn-accent btn-outline">
             Become an instructor
