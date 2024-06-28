@@ -1,7 +1,15 @@
 import CategoryCard from "@/components/global/cards/CategoryCard";
 import Link from "next/link";
 
-const CategoriesList = ({ allCategories }) => {
+const categories = async () => {
+  return import("/database/json/category-list.json").then(
+    (module) => module.default
+  );
+};
+
+const CategoriesList = async () => {
+  const allCategories = await categories();
+
   return (
     <>
       <section className="min-h-screen w-full wrapper my-5 md:my-20">
