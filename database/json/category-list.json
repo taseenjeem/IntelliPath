@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Business & Finance",
+    "thumbnail": "/public/assets/images/category-thumbnails/business-finance.png",
+    "description": "Master the essentials of business management, financial planning, and entrepreneurship to elevate your professional skills."
+  },
+  {
+    "title": "Technology & Programming",
+    "thumbnail": "/public/assets/images/category-thumbnails/tech.png",
+    "description": "Learn the latest in software development, data science, and IT to stay ahead in the ever-evolving tech landscape."
+  },
+  {
+    "title": "Health & Wellness",
+    "thumbnail": "/public/assets/images/category-thumbnails/health.png",
+    "description": "Discover courses on fitness, nutrition, mental health, and overall well-being to lead a balanced and healthy lifestyle."
+  },
+  {
+    "title": "Creative Arts",
+    "thumbnail": "/public/assets/images/category-thumbnails/creative.png",
+    "description": "Unleash your creativity with classes in photography, graphic design, music, writing, and more."
+  },
+  {
+    "title": "Personal Development",
+    "thumbnail": "/public/assets/images/category-thumbnails/personal-dev.png",
+    "description": "Enhance your personal growth with courses on leadership, communication, time management, and self-improvement."
+  },
+  {
+    "title": "Languages & Culture",
+    "thumbnail": "/public/assets/images/category-thumbnails/culture.png",
+    "description": "Explore new languages and understand diverse cultures to broaden your global perspective and communication skills."
+  }
+]
