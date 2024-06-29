@@ -10,7 +10,7 @@ const Navbar = ({ children }) => {
       <input id="menu-contents" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
-        <div className="w-full bg-base-300 sticky top-0 z-50">
+        <div className="w-full bg-base-300 bg-opacity-75 backdrop-blur-xl sticky top-0 z-50">
           <div className="w-full navbar wrapper z-50">
             <div className="flex-1 px-2 mx-2 lg:flex">
               <Link
@@ -58,6 +58,9 @@ const Navbar = ({ children }) => {
                 </li>
                 <li>
                   <ActiveLink href={`#`}>Contact Us</ActiveLink>
+                </li>
+                <li>
+                  <ActiveLink href={`#`}>Support Section</ActiveLink>
                 </li>
                 <li>
                   <UserActionBtns />
