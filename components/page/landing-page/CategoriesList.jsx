@@ -15,7 +15,7 @@ const CategoriesList = async () => {
       <section className="min-h-screen w-full wrapper my-5 md:my-20">
         <div className="md:flex md:items-end md:justify-between">
           <div className="max-w-2xl">
-            <h2 className="lg:text-5xl text-3xl text-accent uppercase font-bold">
+            <h2 className="lg:text-5xl text-3xl text-primary uppercase font-bold">
               Discover Our Learning Categories
             </h2>
 
@@ -28,7 +28,7 @@ const CategoriesList = async () => {
               journey with IntelliPath.
             </p>
           </div>
-          <Link href="/shop" className="mt-6 md:mt-0 btn btn-accent">
+          <Link href="/shop" className="mt-6 md:mt-0 btn btn-primary">
             See All Categories
           </Link>
         </div>

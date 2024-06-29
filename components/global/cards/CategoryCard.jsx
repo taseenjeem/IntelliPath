@@ -4,7 +4,7 @@ import Link from "next/link";
 const CategoryCard = ({ category }) => {
   return (
     <Link href={`/course-categories/${category.slug}`}>
-      <div className="card w-full h-full card-compact bg-base-300 shadow-xl border border-accent hover:border-primary duration-500">
+      <div className="card w-full h-full card-compact bg-base-300 shadow-xl border border-base-300 hover:border-primary duration-300">
         <figure className="px-5 pt-5">
           <Image
             src={category.thumbnail}
