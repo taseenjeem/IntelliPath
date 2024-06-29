@@ -41,7 +41,7 @@ const Navbar = ({ children }) => {
                 </svg>
               </label>
             </div>
-            <div className="flex-none hidden lg:block">
+            <div className="flex-none hidden items-center lg:block">
               <ul className="menu menu-horizontal items-center text-primary">
                 {/* Navbar menu content here */}
                 <li>
