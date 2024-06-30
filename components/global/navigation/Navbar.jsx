@@ -3,6 +3,7 @@ import ActiveLink from "./ActiveLink";
 import ThemeController from "./ThemeController";
 import Logo from "../logo/Logo";
 import UserActionBtns from "./UserActionBtns";
+import CloseBtn from "./CloseBtn";
 
 const Navbar = ({ children }) => {
   return (
@@ -80,7 +81,8 @@ const Navbar = ({ children }) => {
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
-        <ul className="menu p-4 pt-20 w-80 min-h-full bg-base-200">
+        <ul className="menu p-4 w-80 min-h-full bg-base-200">
+          <CloseBtn />
           {/* Sidebar content here */}
           <li>
             <ActiveLink isSmallDevice={true} href={`/features`}>
