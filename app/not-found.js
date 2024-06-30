@@ -10,11 +10,11 @@ const NotFoundPage = () => {
 
   return (
     <>
-      <div className="hero custom-min-h">
+      <div className="hero custom-min-h my-5 md:my-0">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <Image
             src={notFoundIllustrator}
-            className="max-w-xl rounded-lg drop-shadow-xl"
+            className="md:max-w-xl rounded-lg drop-shadow-xl"
             alt="404 not found illustrator"
           />
           <div>
