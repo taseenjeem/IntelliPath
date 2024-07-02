@@ -1,4 +1,5 @@
 import Link from "next/link";
+import TestimonialSlide from "./TestimonialSlide";
 
 const Testimonial = () => {
   return (
@@ -22,6 +23,7 @@ const Testimonial = () => {
             Join Our Community
           </Link>
         </div>
+        <TestimonialSlide />
       </section>
     </>
   );
