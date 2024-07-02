@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import { FaStar } from "react-icons/fa";
 
 const CourseCard = ({ courseDetails }) => {
   return (
@@ -14,9 +16,29 @@ const CourseCard = ({ courseDetails }) => {
       </figure>
       <div className="card-body">
         <h2 className="card-title">{courseDetails?.title}</h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
-        <div className="card-actions justify-end">
-          <button className="btn btn-primary">Buy Now</button>
+        <p>{courseDetails?.description}</p>
+        <div className="flex justify-between">
+          <span>
+            <strong>Instructor: </strong>{" "}
+            <span className="link-hover cursor-pointer">
+              {courseDetails?.instructor}
+            </span>
+          </span>
+          <span className="flex items-center gap-2 text-accent">
+            <span className="cursor-pointer" title="Total reviews">
+              ({courseDetails?.reviews})
+            </span>{" "}
+            <span className="cursor-pointer" title="Average ratings">
+              {courseDetails?.rating}
+            </span>
+            <FaStar />
+          </span>
+        </div>
+
+        <div className="card-actions w-full md:mt-5">
+          <Link href={courseDetails?.slug} className="btn btn-primary w-full">
+            Learn More
+          </Link>
         </div>
       </div>
     </div>
