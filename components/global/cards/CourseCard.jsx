@@ -15,16 +15,18 @@ const CourseCard = ({ courseDetails }) => {
         />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">{courseDetails?.title}</h2>
-        <p>{courseDetails?.description}</p>
-        <div className="flex justify-between">
-          <span>
-            <strong>Instructor: </strong>{" "}
+        <h2 className="text-base md:text-xl font-semibold leading-tight md:leading-normal">
+          {courseDetails?.title}
+        </h2>
+        <p className="text-xs md:text-base">{courseDetails?.description}</p>
+        <div className="flex flex-col md:flex-row justify-between">
+          <span className="text-xs md:text-base">
+            <strong>Instructor: </strong>
             <span className="link-hover cursor-pointer">
               {courseDetails?.instructor}
             </span>
           </span>
-          <span className="flex items-center gap-2 text-accent">
+          <span className="flex items-center gap-2 text-accent text-xs md:text-base mt-2 md:mt-0">
             <span className="cursor-pointer" title="Total reviews">
               ({courseDetails?.reviews})
             </span>{" "}
@@ -35,8 +37,11 @@ const CourseCard = ({ courseDetails }) => {
           </span>
         </div>
 
-        <div className="card-actions w-full md:mt-5">
-          <Link href={courseDetails?.slug} className="btn btn-primary w-full">
+        <div className="card-actions w-full md:mt-5 mt-2">
+          <Link
+            href={courseDetails?.slug}
+            className="btn btn-sm md:btn-md btn-primary w-full"
+          >
             Learn More
           </Link>
         </div>
