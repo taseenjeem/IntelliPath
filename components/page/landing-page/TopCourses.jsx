@@ -1,3 +1,4 @@
+import CourseCard from "@/components/global/cards/CourseCard";
 import Link from "next/link";
 
 const getTopCourses = async () => {
@@ -28,6 +29,12 @@ const TopCourses = async () => {
         <Link href="/shop" className="mt-6 md:mt-0 btn btn-primary ">
           See All Courses
         </Link>
+      </div>
+
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-8 w-full mt-5 md:mt-10">
+        {topCourses.map((item) => (
+          <CourseCard key={item.id} courseDetails={item} />
+        ))}
       </div>
     </section>
   );
