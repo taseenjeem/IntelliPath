@@ -64,6 +64,9 @@ const Navbar = ({ children }) => {
                   <ActiveLink href={`#`}>Support Section</ActiveLink>
                 </li>
                 <li>
+                  <ActiveLink href={`#`}>Our Community</ActiveLink>
+                </li>
+                <li>
                   <UserActionBtns />
                 </li>
                 <li>
@@ -107,6 +110,16 @@ const Navbar = ({ children }) => {
           <li>
             <ActiveLink isSmallDevice={true} href={`#`}>
               Contact Us
+            </ActiveLink>
+          </li>
+          <li>
+            <ActiveLink isSmallDevice={true} href={`#`}>
+              Support Section
+            </ActiveLink>
+          </li>
+          <li>
+            <ActiveLink isSmallDevice={true} href={`#`}>
+              Our Community
             </ActiveLink>
           </li>
           <li>
