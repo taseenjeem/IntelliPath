@@ -1,6 +1,14 @@
 import Link from "next/link";
 
-const TopCourses = () => {
+const getTopCourses = async () => {
+  return import("/database/json/top-courses.json").then(
+    (module) => module.default
+  );
+};
+
+const TopCourses = async () => {
+  const topCourses = await getTopCourses();
+
   return (
     <section className="min-h-screen w-full wrapper mt-5 md:mt-20">
       <div className="md:flex md:items-end md:justify-between">
