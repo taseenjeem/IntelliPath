@@ -1,14 +1,14 @@
 import CategoryCard from "@/components/global/cards/CategoryCard";
 import Link from "next/link";
 
-const categories = async () => {
+const getCategories = async () => {
   return import("/database/json/category-list.json").then(
     (module) => module.default
   );
 };
 
 const CategoriesList = async () => {
-  const allCategories = await categories();
+  const allCategories = await getCategories();
 
   return (
     <>
