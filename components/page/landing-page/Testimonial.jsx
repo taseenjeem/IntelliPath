@@ -61,7 +61,9 @@ const Testimonial = async () => {
                   </div>
                 </div>
 
-                <p className="mt-4 italic">{item.review}</p>
+                <p className="mt-4 italic text-xs md:text-base">
+                  &quot; {item.review} &quot;
+                </p>
               </blockquote>
             </div>
           ))}
