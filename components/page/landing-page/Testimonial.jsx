@@ -33,31 +33,36 @@ const Testimonial = async () => {
           </Link>
         </div>
 
-        <div className="md:columns-2 lg:columns-3 gap-8 space-y-8">
+        <div className="mt-5 md:mt-10 [column-fill:_balance] sm:columns-2 gap-3 lg:columns-3 md:gap-5">
           {feedbackData.map((item) => (
             <div
               key={item.date}
-              className="aspect-auto card card-compact card-body bg-base-300 hover:shadow-xl border border-base-300 hover:border-primary duration-300"
+              className="mb-5 sm:break-inside-avoid cursor-pointer"
             >
-              <div className="flex items-center gap-4">
-                <Image
-                  src={item.avatar}
-                  alt="Customer Avatar"
-                  width={58}
-                  height={58}
-                  className="rounded-full"
-                />
-                <div>
-                  <h6 className="text-lg font-medium">{item.name}</h6>
-                  <p className="text-sm">
-                    {item.role} - {item.course}
-                  </p>
-                  <span className="flex items-center gap-2 text-accent text-sm">
-                    {item.rating} <FaStar />
-                  </span>
+              <blockquote className="card p-5 bg-base-300 hover:shadow-xl border border-base-300 hover:border-primary duration-300">
+                <div className="flex items-center gap-4">
+                  <Image
+                    alt="Customer Avatar"
+                    src={item.avatar}
+                    width={48}
+                    height={48}
+                    className="size-14 rounded-full object-cover"
+                  />
+
+                  <div>
+                    <p className="font-semibold text-lg">{item.name}</p>
+                    <p className="text-sm">
+                      {item.role} - {item.course}
+                    </p>
+                    <span className="flex items-center text-sm gap-2 text-accent">
+                      {item.rating}
+                      <FaStar />
+                    </span>
+                  </div>
                 </div>
-              </div>
-              <p className="mt-3 italic">&quot;{item.review}&quot;</p>
+
+                <p className="mt-4 italic">{item.review}</p>
+              </blockquote>
             </div>
           ))}
         </div>
