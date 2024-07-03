@@ -4,14 +4,14 @@ import { FaStar } from "react-icons/fa";
 
 const CourseCard = ({ courseDetails }) => {
   return (
-    <div className="card card-compact bg-base-300 hover:shadow-xl border border-base-300 hover:border-primary duration-300">
+    <div className="card card-compact bg-base-300 hover:shadow-xl border border-base-300 hover:border-primary duration-300 group">
       <figure className="w-full max-w-[358px] max-h-[202px] overflow-hidden">
         <Image
           src={courseDetails?.image}
           alt={`${courseDetails?.title} thumbnail`}
           width={358}
           height={202}
-          className="w-full h-auto object-cover object-center"
+          className="w-full h-auto object-cover object-center transform transition-transform duration-300 group-hover:scale-110"
         />
       </figure>
       <div className="card-body">
