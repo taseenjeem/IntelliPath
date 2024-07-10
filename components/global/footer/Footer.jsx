@@ -12,7 +12,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <section className="bg-base-200">
+    <section className="bg-base-200 mt-7 md:mt-28">
       <div className="wrapper bg-base-200">
         <footer className="footer md:p-10 py-5 bg-base-200 text-base-content">
           <nav>
