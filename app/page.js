@@ -1,3 +1,4 @@
+import Cta from "@/components/page/landing-page/CTA";
 import CategoriesList from "@/components/page/landing-page/CategoriesList";
 import Hero from "@/components/page/landing-page/Hero";
 import Testimonial from "@/components/page/landing-page/Testimonial";
@@ -10,6 +11,7 @@ const LandingPage = () => {
       <CategoriesList />
       <TopCourses />
       <Testimonial />
+      <Cta />
     </>
   );
 };
