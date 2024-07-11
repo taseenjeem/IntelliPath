@@ -41,7 +41,7 @@ const Cta = () => {
             <Image
               src={instructor}
               alt="Instructor Illustration"
-              className="max-w-60 w-full"
+              className="max-w-60 w-full drop-shadow-xl"
             />
           </div>
         </div>
@@ -61,7 +61,7 @@ const Cta = () => {
             <Image
               src={student}
               alt="Instructor Illustration"
-              className="max-w-60 w-full"
+              className="max-w-60 w-full drop-shadow-xl"
             />
           </div>
         </div>
