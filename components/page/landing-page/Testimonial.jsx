@@ -41,13 +41,17 @@ const Testimonial = async () => {
             >
               <blockquote className="card p-5 bg-base-300 hover:shadow-xl border border-base-300 hover:border-primary duration-300">
                 <div className="flex items-center gap-4">
-                  <Image
-                    alt="Customer Avatar"
-                    src={item.avatar}
-                    width={48}
-                    height={48}
-                    className="size-14 rounded-full object-cover"
-                  />
+                  <div className="avatar">
+                    <div className="ring-primary ring-offset-base-100 rounded-full ring ring-offset-2">
+                      <Image
+                        alt="Customer Avatar"
+                        src={item.avatar}
+                        width={48}
+                        height={48}
+                        className="size-14 rounded-full object-cover"
+                      />
+                    </div>
+                  </div>
 
                   <div>
                     <p className="font-semibold text-lg">{item.name}</p>
