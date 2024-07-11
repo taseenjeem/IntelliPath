@@ -16,7 +16,7 @@ const Logo = ({ navbarMode, formMode, footerMode }) => {
           (formMode && "max-w-48 mx-auto") ||
           (footerMode && "max-w-48")
         }
-        src={theme === "light" ? lightLogo : darkLogo}
+        src={theme === "winter" ? lightLogo : darkLogo}
         alt="IntelliPath Logo"
       />
     </>

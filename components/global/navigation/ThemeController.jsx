@@ -9,7 +9,7 @@ const ThemeController = () => {
     if (event.target.checked) {
       changeTheme("sunset");
     } else {
-      changeTheme("light");
+      changeTheme("winter");
     }
   };
 
