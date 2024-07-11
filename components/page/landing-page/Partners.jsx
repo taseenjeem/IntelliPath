@@ -63,7 +63,7 @@ const Partners = () => {
               alt={item.alt}
               width={150}
               height={100}
-              className="grayscale hover:grayscale-0 transition-all duration-300"
+              className="grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"
             />
           </div>
         ))}
