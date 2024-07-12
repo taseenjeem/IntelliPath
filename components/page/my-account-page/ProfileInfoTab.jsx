@@ -1,3 +1,6 @@
+import UserAvatar from "./UserAvatar";
+import { PiStudentFill } from "react-icons/pi";
+
 const ProfileInfoTab = () => {
   return (
     <>
@@ -10,7 +13,18 @@ const ProfileInfoTab = () => {
         defaultChecked
       />
       <div role="tabpanel" className="tab-content w-full mt-5">
-        <div></div>
+        <div className="mt-10 flex items-center md:gap-7 gap-4">
+          <UserAvatar />
+          <div className="md:space-y-2 space-y-1">
+            <h2 className="md:text-2xl text-xl text-primary font-semibold">
+              Md. Ta-Seen Fuad Jeem
+            </h2>
+            <h3 className="md:text-xl">@taseenjeem</h3>
+            <div className="badge badge-primary badge-outline md:badge-lg">
+              <PiStudentFill className="mr-1" /> <p>Student</p>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
