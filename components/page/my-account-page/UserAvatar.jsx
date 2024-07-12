@@ -1,9 +1,12 @@
+"use client";
 import Image from "next/image";
 import maleDp from "/public/assets/images/male.svg";
+import { MdModeEdit } from "react-icons/md";
+import ChangeDPmodal from "./ChangeDPmodal";
 
 const UserAvatar = () => {
   return (
-    <>
+    <div className="relative">
       <div className="avatar">
         <div className="ring-primary ring-offset-base-100 w-20 md:w-40 rounded-full ring ring-offset-2">
           <Image
@@ -14,7 +17,14 @@ const UserAvatar = () => {
           />
         </div>
       </div>
-    </>
+      <button
+        className="btn btn-sm btn-circle btn-primary absolute md:bottom-4 bottom-0 right-0"
+        onClick={() => document.getElementById("dp_modal").showModal()}
+      >
+        <MdModeEdit className="text-white" />
+      </button>
+      <ChangeDPmodal />
+    </div>
   );
 };
 
