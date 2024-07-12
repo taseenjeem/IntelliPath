@@ -21,6 +21,8 @@ const ProfileInfoForm = () => {
 
   const [allCountries, setAllCountries] = useState([]);
 
+  const [isLoading, setIsLoading] = useState(false);
+
   useEffect(() => {
     const fetchCountries = async () => {
       const countries = await getCountries();
@@ -39,7 +41,15 @@ const ProfileInfoForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    setIsLoading(true);
+
+    try {
+      console.log(formData);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -167,9 +177,19 @@ const ProfileInfoForm = () => {
           </div>
         </div>
         <div className="card-actions justify-end mt-5">
-          <button type="submit" className="btn btn-primary btn-outline">
-            Save Information
-          </button>
+          {isLoading ? (
+            <button
+              disabled
+              className="btn btn-primary btn-outline no-animation"
+            >
+              <span className="loading loading-spinner"></span>
+              Saving..
+            </button>
+          ) : (
+            <button type="submit" className="btn btn-primary btn-outline">
+              Save Information
+            </button>
+          )}
         </div>
       </form>
     </div>
