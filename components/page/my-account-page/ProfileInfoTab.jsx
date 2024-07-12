@@ -1,3 +1,4 @@
+import ProfileInfoForm from "./ProfileInfoForm";
 import UserAvatar from "./UserAvatar";
 import { PiStudentFill } from "react-icons/pi";
 
@@ -25,6 +26,7 @@ const ProfileInfoTab = () => {
             </div>
           </div>
         </div>
+        <ProfileInfoForm />
       </div>
     </>
   );
