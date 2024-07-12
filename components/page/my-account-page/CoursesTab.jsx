@@ -1,4 +1,4 @@
-const Courses = () => {
+const CoursesTab = () => {
   return (
     <>
       <input
@@ -22,4 +22,4 @@ const Courses = () => {
   );
 };
 
-export default Courses;
+export default CoursesTab;

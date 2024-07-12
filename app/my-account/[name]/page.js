@@ -1,5 +1,5 @@
-import Courses from "@/components/page/my-account-page/Courses";
-import ProfileInfo from "@/components/page/my-account-page/ProfileInfo";
+import CoursesTab from "@/components/page/my-account-page/CoursesTab";
+import ProfileInfoTab from "@/components/page/my-account-page/ProfileInfoTab";
 
 const MyAccountPage = () => {
   return (
@@ -8,8 +8,8 @@ const MyAccountPage = () => {
         My Profile
       </h1>
       <div role="tablist" className="tabs tabs-bordered w-full mt-5">
-        <ProfileInfo />
-        <Courses />
+        <ProfileInfoTab />
+        <CoursesTab />
       </div>
     </section>
   );
