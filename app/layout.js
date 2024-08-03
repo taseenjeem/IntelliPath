@@ -2,10 +2,10 @@ import { Barlow } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/global/navigation/Navbar";
 import { ThemeProvider } from "@/providers/ThemProvider";
-import ThemeChanger from "@/utils/ThemeChanger";
 import Footer from "@/components/global/footer/Footer";
 import { ToastContainer } from "react-toastify";
 import connectMongodb from "@/database/services/connectMongodb";
+import ReduxStoreProvider from "@/providers/ReduxStoreProvider";
 
 const fontStyle = Barlow({
   subsets: ["latin"],
@@ -24,13 +24,13 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={fontStyle.className}>
-        <ThemeProvider>
-          <ThemeChanger>
+        <ReduxStoreProvider>
+          <ThemeProvider>
             <ToastContainer position="top-center" theme="colored" />
             <Navbar>{children}</Navbar>
             <Footer />
-          </ThemeChanger>
-        </ThemeProvider>
+          </ThemeProvider>
+        </ReduxStoreProvider>
       </body>
     </html>
   );
