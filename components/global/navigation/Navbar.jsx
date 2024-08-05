@@ -4,6 +4,7 @@ import ThemeController from "./ThemeController";
 import Logo from "../logo/Logo";
 import UserActionBtns from "./UserActionBtns";
 import CloseBtn from "./CloseBtn";
+import ProfileDropdown from "./ProfileDropdown";
 
 const Navbar = ({ children }) => {
   return (
@@ -43,7 +44,7 @@ const Navbar = ({ children }) => {
               </label>
             </div>
             <div className="flex-none hidden items-center lg:block">
-              <ul className="menu menu-horizontal items-center text-primary">
+              <ul className="flex items-center text-primary">
                 {/* Navbar menu content here */}
                 <li>
                   <ActiveLink href={`/features`}>Features</ActiveLink>

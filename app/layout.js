@@ -6,6 +6,7 @@ import Footer from "@/components/global/footer/Footer";
 import { ToastContainer } from "react-toastify";
 import connectMongodb from "@/database/services/connectMongodb";
 import ReduxStoreProvider from "@/providers/ReduxStoreProvider";
+import ModalContainer from "@/components/global/modals/ModalContainer";
 
 const fontStyle = Barlow({
   subsets: ["latin"],
@@ -27,7 +28,10 @@ export default async function RootLayout({ children }) {
         <ReduxStoreProvider>
           <ThemeProvider>
             <ToastContainer position="top-center" theme="colored" />
-            <Navbar>{children}</Navbar>
+            <Navbar>
+              {children}
+              <ModalContainer />
+            </Navbar>
             <Footer />
           </ThemeProvider>
         </ReduxStoreProvider>
